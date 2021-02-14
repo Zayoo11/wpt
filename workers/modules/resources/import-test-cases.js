@@ -1,24 +1,24 @@
 const testCases = [
     {
         scriptURL: '/workers/modules/resources/static-import-worker.js',
-        expectation: ['export-on-load-script.js'],
+        expectation: ['export-on-load-script.py'],
         description: 'Static import.'
     },
     {
         scriptURL: '/workers/modules/resources/static-import-remote-origin-script-worker.sub.js',
-        expectation: ['export-on-load-script.js'],
+        expectation: ['export-on-load-script.py'],
         description: 'Static import (cross-origin).'
     },
     {
         scriptURL: '/workers/modules/resources/static-import-redirect-worker.js',
-        expectation: ['export-on-load-script.js'],
+        expectation: ['export-on-load-script.py'],
         description: 'Static import (redirect).'
     },
     {
         scriptURL: '/workers/modules/resources/nested-static-import-worker.js',
         expectation: [
             'export-on-static-import-script.js',
-            'export-on-load-script.js'
+            'export-on-load-script.py'
         ],
         description: 'Nested static import.'
     },
@@ -26,20 +26,20 @@ const testCases = [
         scriptURL: '/workers/modules/resources/static-import-and-then-dynamic-import-worker.js',
         expectation: [
             'export-on-dynamic-import-script.js',
-            'export-on-load-script.js'
+            'export-on-load-script.py'
         ],
         description: 'Static import and then dynamic import.'
     },
     {
         scriptURL: '/workers/modules/resources/dynamic-import-worker.js',
-        expectation: ['export-on-load-script.js'],
+        expectation: ['export-on-load-script.py'],
         description: 'Dynamic import.'
     },
     {
         scriptURL: '/workers/modules/resources/nested-dynamic-import-worker.js',
         expectation: [
             'export-on-dynamic-import-script.js',
-            'export-on-load-script.js'
+            'export-on-load-script.py'
         ],
         description: 'Nested dynamic import.'
     },
@@ -47,13 +47,13 @@ const testCases = [
         scriptURL: '/workers/modules/resources/dynamic-import-and-then-static-import-worker.js',
         expectation: [
             'export-on-static-import-script.js',
-            'export-on-load-script.js'
+            'export-on-load-script.py'
         ],
         description: 'Dynamic import and then static import.'
     },
     {
         scriptURL: '/workers/modules/resources/eval-dynamic-import-worker.js',
-        expectation: ['export-on-load-script.js'],
+        expectation: ['export-on-load-script.py'],
         description: 'eval(import()).'
     }
 ];
